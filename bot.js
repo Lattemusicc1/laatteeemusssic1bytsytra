@@ -7,8 +7,9 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '1';
+const prefix = '$';
 client.on('ready', function() {
+    client.user.setGame(`ء BoNdOK-$`,"http://twitch.tv/sytra_ayman")
     console.log(`i am ready ${client.user.username}`);
 });
 /*
@@ -227,16 +228,16 @@ function isYoutube(str) {
 }
 
 client.on('message', message => {
-            if (message.content.startsWith(prefix + "help")) {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField(' **__أوامر البوت__**`,`
+     if (message.content === prefix +"help") {
+    const embed = new Discord.RichEmbed()
+     .setColor("RANDOM")
+     .addField(`**__أوامر البوت__**`,`
          **${prefix}join**
 	 عشان يدخل البوت الروم
          **${prefix}leave**
          خروج البوت من الروم	 
          **${prefix}play**
-      للتشغيل قم بكتابة اسم الاغنية او ضع الرابط حقها
+	 امر تشغيل الأغنية , !play الرابط او اسم الأعنية
 	 **${prefix}skip**
 	 تغير الأغنية
 	 **${prefix}pause**
@@ -244,33 +245,38 @@ client.on('message', message => {
 	 **${prefix}resume**
      مواصلة الأغنية
 	 **1vol**
-	 مستوى الصوت 1-100       
-	 FOR HELP = <@337457211875917834>')
-.setColor('RANDOM')
-  message.channel.sendEmbed(embed);
-    }
-});
+	 مستوى الصوت 1-100
+        
+	 PREFIX = ${prefix}
+	 PING = ${Date.now() - message.createdTimestamp}ms
+	 FOR HELP = <@337457211875917834>
+	By : ! OsTaaZz SyTrAAءء $ `)
+
+      message.channel.send({embed});
+	 }
+	});
+
 
 client.on('message', message => {
-var prefix = "1";
+var prefix = "$";
  
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
   if (message.author.id == '395462979115679755' ) return;
-
- if (message.content.startsWith(prefix + 'stream')) {
+ 
+if (message.content.startsWith(prefix + 'stream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
-    message.channel.sendMessage(`تم تغيير الحالة الى ستريمنج`)
+    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
 } else
  
-if (message.content.startsWith(prefix + 'setname')) {
+if (message.content.startsWith(prefix + 'name')) {
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
   return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
 
-if (message.content.startsWith(prefix + 'setimg')) {
+if (message.content.startsWith(prefix + 'img')) {
   client.user.setAvatar(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
 }
