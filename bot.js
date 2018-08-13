@@ -265,7 +265,7 @@ var prefix = "1";
 
  if (message.content.startsWith(prefix + 'stream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
-    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
+    message.channel.sendMessage(`تم تغيير الحالة الى ستريمنج`)
 } else
  
 if (message.content.startsWith(prefix + 'setname')) {
