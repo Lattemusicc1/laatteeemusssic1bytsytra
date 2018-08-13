@@ -227,19 +227,6 @@ function isYoutube(str) {
     return str.toLowerCase().indexOf('youtube.com') > -1;
 }
 
-client.on('message', message => {
-     if (message.content === prefix +"help") {
-    const embed = new Discord.RichEmbed()
-     .setColor("RANDOM")
-     .addField('**أوامر البوت**',)
-     
-	 PREFIX = 1
-	 FOR HELP = <@337457211875917834>
-
-      message.channel.send({embed});
-	 }
-	});
-
 
 client.on('message', message => {
 var prefix = "$";
