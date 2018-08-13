@@ -7,9 +7,8 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '$';
+const prefix = '1';
 client.on('ready', function() {
-    client.user.setGame(`ء BoNdOK-$`,"http://twitch.tv/sytra_ayman")
     console.log(`i am ready ${client.user.username}`);
 });
 /*
@@ -257,7 +256,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-var prefix = "$";
+var prefix = "1";
  
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
