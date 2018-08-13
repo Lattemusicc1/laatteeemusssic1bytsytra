@@ -231,7 +231,7 @@ client.on('message', message => {
      if (message.content === prefix +"help") {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
-     .addField(`**__أوامر البوت__**`,`
+     .addField('**__أوامر البوت__**`,`
          **${prefix}join**
 	 عشان يدخل البوت الروم
          **${prefix}leave**
