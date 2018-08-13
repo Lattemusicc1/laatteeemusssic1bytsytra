@@ -226,6 +226,34 @@ function search_video(query, cb) {
 function isYoutube(str) {
     return str.toLowerCase().indexOf('youtube.com') > -1;
 }
+client.on('message', message => {
+     if (message.content === prefix +"help") {
+    const embed = new Discord.RichEmbed()
+     .setColor("RANDOM")
+     .addField(`**__أوامر البوت__**`,`
+         **${prefix}join**
+	 عشان يدخل البوت الروم
+         **${prefix}leave**
+         خروج البوت من الروم	 
+         **${prefix}play**
+	 امر تشغيل الأغنية , !play الرابط او اسم الأعنية
+	 **${prefix}skip**
+	 تغير الأغنية
+	 **${prefix}pause**
+	 ايقاف الأغنية
+	 **${prefix}resume**
+     مواصلة الأغنية
+	 **${prefix}vol**
+	 مستوى الصوت 1-100
+        
+	 Prefix = ${prefix}
+	 Ping = ${Date.now() - message.createdTimestamp}ms
+	 For help = <@337457211875917834>
+	By : SyTrAA#5843 `)
+
+      message.channel.send({embed});
+	 }
+	});
 
 
 client.on('message', message => {
