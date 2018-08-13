@@ -247,8 +247,7 @@ client.on('message', message => {
         
 	 Prefix = ${prefix}
 	 Ping = ${Date.now() - message.createdTimestamp}ms
-	 For help = <@337457211875917834>
-	By : SyTrAA#5843 `)
+	 For help = <@337457211875917834> `)
 
       message.channel.send({embed});
 	 }
