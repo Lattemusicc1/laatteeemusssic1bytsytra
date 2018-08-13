@@ -227,10 +227,10 @@ function isYoutube(str) {
 }
 
 client.on('message', message => {
-     if (message.content === prefix +"help") {
-    const embed = new Discord.RichEmbed()
-     .setColor("RANDOM")
-     .addField(`**__أوامر البوت__**`,`
+            if (message.content.startsWith(prefix + "help")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField(' **__أوامر البوت__**`,`
          **${prefix}join**
 	 عشان يدخل البوت الروم
          **${prefix}leave**
@@ -244,14 +244,12 @@ client.on('message', message => {
 	 **${prefix}resume**
      مواصلة الأغنية
 	 **${prefix}vol**
-	 مستوى الصوت 1-100
-        
-	 FOR HELP = <@337457211875917834>
-
-      message.channel.send({embed});
-	 }
-	});
-
+	 مستوى الصوت 1-100       
+	 FOR HELP = <@337457211875917834>')
+.setColor('RANDOM')
+  message.channel.sendEmbed(embed);
+    }
+});
 
 client.on('message', message => {
 var prefix = "1";
