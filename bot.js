@@ -246,7 +246,6 @@ client.on('message', message => {
 	 **${prefix}vol**
 	 مستوى الصوت 1-100
         
-	 PREFIX = ${prefix}
 	 FOR HELP = <@337457211875917834>
 
       message.channel.send({embed});
