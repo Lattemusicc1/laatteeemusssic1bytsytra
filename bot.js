@@ -232,21 +232,7 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .addField('**أوامر البوت**',)
-         **1join**
-	 عشان يدخل البوت الروم
-         **1leave**
-         خروج البوت من الروم	 
-         **2play**
-	 امر تشغيل الأغنية , !play الرابط او اسم الأعنية
-	 **3skip**
-	 تغير الأغنية
-	 **1pause**
-	 ايقاف الأغنية
-	 **1resume**
-     مواصلة الأغنية
-	 **1vol**
-	 مستوى الصوت 1-100
-        
+     
 	 PREFIX = 1
 	 FOR HELP = <@337457211875917834>
 
