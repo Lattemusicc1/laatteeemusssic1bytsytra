@@ -243,7 +243,7 @@ client.on('message', message => {
 	 ايقاف الأغنية
 	 **${prefix}resume**
      مواصلة الأغنية
-	 **${prefix}vol**
+	 **1vol**
 	 مستوى الصوت 1-100       
 	 FOR HELP = <@337457211875917834>')
 .setColor('RANDOM')
