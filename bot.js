@@ -232,7 +232,7 @@ client.on('message', message => {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .addField('**أوامر البوت**',)
-         **${prefix}join**
+         **1join**
 	 عشان يدخل البوت الروم
          **1leave**
          خروج البوت من الروم	 
