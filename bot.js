@@ -234,23 +234,21 @@ client.on('message', message => {
      .addField('**أوامر البوت**',)
          **${prefix}join**
 	 عشان يدخل البوت الروم
-         **${prefix}leave**
+         **1leave**
          خروج البوت من الروم	 
-         **${prefix}play**
+         **2play**
 	 امر تشغيل الأغنية , !play الرابط او اسم الأعنية
-	 **${prefix}skip**
+	 **3skip**
 	 تغير الأغنية
-	 **${prefix}pause**
+	 **1pause**
 	 ايقاف الأغنية
-	 **${prefix}resume**
+	 **1resume**
      مواصلة الأغنية
 	 **1vol**
 	 مستوى الصوت 1-100
         
-	 PREFIX = ${prefix}
-	 PING = ${Date.now() - message.createdTimestamp}ms
+	 PREFIX = 1
 	 FOR HELP = <@337457211875917834>
-	By : ! OsTaaZz SyTrAAءء $ `)
 
       message.channel.send({embed});
 	 }
